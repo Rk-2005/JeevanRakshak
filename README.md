@@ -6,7 +6,7 @@
 
 To get started, clone the repository using:
 
-```
+
 git clone https://github.com/Makarand-Tighare/JalRakshak
 
 ## Setup and Installation
