@@ -6,8 +6,9 @@
 
 To get started, clone the repository using:
 
-
+```
 git clone https://github.com/Makarand-Tighare/JalRakshak
+```
 
 ## Setup and Installation
 
@@ -50,9 +51,16 @@ To run the Python modules, use the following commands:
 
 ```
 py waterquality.py
+```
+```
 py sensor_allocation_final.py
+```
+```
 py finalpilferage.py
+```
+```
 py leak_model.py
+```
 
 # Running the React Applications
 
