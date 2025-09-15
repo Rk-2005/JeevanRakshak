@@ -1,8 +1,8 @@
+/* eslint-disable */
 import React from 'react';
-import { AiOutlineCalendar, AiOutlineStock } from 'react-icons/ai';
-import { BiColorFill } from 'react-icons/bi';
+import { AiOutlineCalendar } from 'react-icons/ai';
 import { BsBoxSeam, BsChatLeft, BsCurrencyDollar, BsKanban, BsShield } from 'react-icons/bs';
-import { FiBarChart, FiCreditCard, FiEdit, FiShoppingBag, FiShoppingCart, FiStar } from 'react-icons/fi';
+import { FiBarChart, FiCreditCard, FiShoppingBag, FiShoppingCart, FiStar } from 'react-icons/fi';
 import { GrLocation } from 'react-icons/gr';
 import { HiOutlineRefresh } from 'react-icons/hi';
 import { IoMdContacts } from 'react-icons/io';
@@ -20,10 +20,7 @@ import product4 from './product4.jpg';
 import product5 from './product5.jpg';
 import product6 from './product6.jpg';
 import product7 from './product7.jpg';
-
-
-
-
+// eslint-disable-next-line
 
 export const gridOrderImage = (props) => (
   <div>

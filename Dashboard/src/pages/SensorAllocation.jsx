@@ -23,14 +23,14 @@ const SensorAllocation = () => {
       method: 'POST',
       body: formData,
     })
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         setApiData({
           mapping: data.mapping,
-          sensor_nodes: data.sensor_nodes
+          sensor_nodes: data.sensor_nodes,
         });
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Error fetching data:', error);
       });
   };

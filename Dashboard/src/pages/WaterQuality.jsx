@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './WaterQuality.css';
 import { FaUpload, FaSpinner } from 'react-icons/fa';
-import { BsFillBarChartFill } from 'react-icons/bs';
+// import { BsFillBarChartFill } from 'react-icons/bs';
 
 function WaterQuality() {
   const [file, setFile] = useState(null);
@@ -9,8 +9,8 @@ function WaterQuality() {
   const [loading, setLoading] = useState(false);
 
   const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    setFile(file);
+    const selected = event.target.files[0];
+    setFile(selected);
   };
 
   const handlePredict = () => {
@@ -42,11 +42,10 @@ function WaterQuality() {
       </header>
       <main className="main-content">
         <div className="file-upload">
-          <input type="file" id="fileInput" onChange={handleFileChange} />
-          <label htmlFor="fileInput" className="file-input-label">
-             Choose CSV File
-          </label>
-          <button className="predict-button" onClick={handlePredict}>
+          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+          <label htmlFor="fileInput" className="file-input-label">Choose CSV File</label>
+          <input type="file" id="fileInput" onChange={handleFileChange} aria-label="Upload CSV file" />
+          <button type="button" className="predict-button" onClick={handlePredict}>
             {loading ? <FaSpinner className="spinner" /> : 'Predict Water Quality'}
           </button>
         </div>

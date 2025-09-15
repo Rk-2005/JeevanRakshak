@@ -1,18 +1,20 @@
-import { ColorPickerComponent } from '@syncfusion/ej2-react-inputs';
+// import { ColorPickerComponent } from '@syncfusion/ej2-react-inputs';
 import { initializeApp } from 'firebase/app';
 import { getStorage, ref, uploadBytes } from 'firebase/storage';
 import React, { useState } from 'react';
 import { Header } from '../components';
-import { firebaseConfig } from '../firebaseConfig';
+import { firebaseConfig } from '../firebaseConfig.js';
 
 const firebaseApp = initializeApp(firebaseConfig);
 const storage = getStorage(firebaseApp);
 
-const change = (args) => {
-  document.getElementById('preview').style.backgroundColor = args.currentValue.hex;
-};
+// const change = (args) => {
+//   document.getElementById('preview').style.backgroundColor = args.currentValue.hex;
+// };
 
-const CustomColorPicker = ({ id, mode }) => <ColorPickerComponent id={id} mode={mode} modeSwitcher={false} inline showButtons={false} change={change} />;
+// const CustomColorPicker = ({ id, mode }) => (
+//   <ColorPickerComponent id={id} mode={mode} modeSwitcher={false} inline showButtons={false} change={change} />
+// );
 
 const ColorPicker = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -54,7 +56,7 @@ const ColorPicker = () => {
         </div>
         <div>
           <input type="file" onChange={handleFileChange} />
-          <button onClick={handleUpload}>Upload</button>
+          <button type="button" onClick={handleUpload}>Upload</button>
           {uploadSuccess && <p>File uploaded successfully!</p>}
         </div>
       </div>

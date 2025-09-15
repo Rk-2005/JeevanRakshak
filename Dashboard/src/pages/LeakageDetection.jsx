@@ -63,12 +63,18 @@ const LeakageDetection = () => {
             </tr>
           </thead>
           <tbody>
-            {predictions.sort((a, b) => b.leak_detected - a.leak_detected).map((prediction, index) => (
-              <tr key={index} className={prediction.leak_detected ? 'bg-red-500 text-white' : (index % 2 === 0 ? 'bg-white' : 'bg-gray-200')}>
+            {predictions
+              .slice()
+              .sort((a, b) => ((b.leak_detected ? 1 : 0) - (a.leak_detected ? 1 : 0)))
+              .map((prediction, index) => (
+                <tr
+                  key={index}
+                  className={prediction.leak_detected ? 'bg-red-500 text-white' : ((index % 2 === 0) ? 'bg-white' : 'bg-gray-200')}
+                >
                 <td className="py-2 px-4 border-b">{prediction.sensor_node}</td>
                 <td className="py-2 px-4 border-b">{prediction.leak_detected ? 'Yes' : 'No'}</td>
-              </tr>
-            ))}
+                </tr>
+              ))}
           </tbody>
         </table>
       )}
@@ -78,7 +84,7 @@ const LeakageDetection = () => {
     <div className="bg-white p-4 rounded shadow-lg">
       <h2 className="text-lg font-bold">Leak Detected!</h2>
       <p>One or more sensor nodes have detected a leak.</p>
-      <button onClick={() => setShowModal(false)} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-4">
+      <button type="button" onClick={() => setShowModal(false)} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-4">
         Close
       </button>
     </div>

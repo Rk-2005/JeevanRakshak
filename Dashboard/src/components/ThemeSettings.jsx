@@ -19,6 +19,7 @@ const ThemeSettings = () => {
             onClick={() => setThemeSettings(false)}
             style={{ color: 'rgb(153, 171, 180)', borderRadius: '50%' }}
             className="text-2xl p-3 hover:drop-shadow-xl hover:bg-light-gray"
+            aria-label="Close settings"
           >
             <MdOutlineCancel />
           </button>
@@ -28,33 +29,31 @@ const ThemeSettings = () => {
           <p className="font-semibold text-xl ">Theme Option</p>
 
           <div className="mt-4">
-            <input
-              type="radio"
-              id="light"
-              name="theme"
-              value="Light"
-              className="cursor-pointer"
-              onChange={setMode}
-              checked={currentMode === 'Light'}
-            />
-            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-            <label htmlFor="light" className="ml-2 text-md cursor-pointer">
-              Light
+            <label htmlFor="light" className="ml-2 text-md cursor-pointer flex items-center gap-2">
+              <input
+                type="radio"
+                id="light"
+                name="theme"
+                value="Light"
+                className="cursor-pointer"
+                onChange={setMode}
+                checked={currentMode === 'Light'}
+              />
+              <span>Light</span>
             </label>
           </div>
           <div className="mt-2">
-            <input
-              type="radio"
-              id="dark"
-              name="theme"
-              value="Dark"
-              onChange={setMode}
-              className="cursor-pointer"
-              checked={currentMode === 'Dark'}
-            />
-            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-            <label htmlFor="dark" className="ml-2 text-md cursor-pointer">
-              Dark
+            <label htmlFor="dark" className="ml-2 text-md cursor-pointer flex items-center gap-2">
+              <input
+                type="radio"
+                id="dark"
+                name="theme"
+                value="Dark"
+                onChange={setMode}
+                className="cursor-pointer"
+                checked={currentMode === 'Dark'}
+              />
+              <span>Dark</span>
             </label>
           </div>
         </div>
@@ -72,6 +71,7 @@ const ThemeSettings = () => {
                     className="h-10 w-10 rounded-full cursor-pointer"
                     style={{ backgroundColor: item.color }}
                     onClick={() => setColor(item.color)}
+                    aria-label={`Select theme color ${item.name}`}
                   >
                     <BsCheck className={`ml-2 text-2xl text-white ${item.color === currentColor ? 'block' : 'hidden'}`} />
                   </button>

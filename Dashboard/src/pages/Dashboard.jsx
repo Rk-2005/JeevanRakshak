@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { get, ref } from 'firebase/database';
 
-import { IoIosMore } from 'react-icons/io';
+// import { IoIosMore } from 'react-icons/io';
 import { Button, SparkLine } from '../components';
 import { useStateContext } from '../contexts/ContextProvider';
 import product9 from '../data/JR3.png';
@@ -65,11 +65,10 @@ const Dashboard = () => {
             </div>
             <button
               type="button"
+              aria-label="Water saved action"
               style={{ backgroundColor: currentColor }}
               className="text-2xl opacity-0.9 text-white hover:drop-shadow-xl rounded-full  p-4"
-            >
-              
-            </button>
+            />
           </div>
           <div className="mt-6">
             <Button
@@ -124,7 +123,7 @@ const Dashboard = () => {
             src="https://app.powerbi.com/view?r=eyJrIjoiNjI0NDViMTgtM2QzMS00YzYzLTk4MDYtZWQyZmQzY2Y3ODg2IiwidCI6IjNmMzFkNjNkLWVkYzMtNDEzZS04N2U0LTQyMGU1M2ZkZDYyZiJ9"
             frameBorder="0"
             allowFullScreen="true"
-          ></iframe>
+          />
 
           <div
             className="rounded-2xl md:w-1200 p-4 m-3"
@@ -165,15 +164,15 @@ const Dashboard = () => {
                 A go-to solution for all your problems. Get the app today.
               </p>
               <div className="mt-3">
-  <a href="https://github.com/Makarand-Tighare/Hack-it-Sapiens/tree/main/JalRakshak" target="_blank" rel="noopener noreferrer">
-    <Button
-      color="white"
-      bgColor={currentColor}
-      text="Read More"
-      borderRadius="10px"
-    />
-  </a>
-</div>
+                <a href="https://github.com/Makarand-Tighare/Hack-it-Sapiens/tree/main/JalRakshak" target="_blank" rel="noopener noreferrer" aria-label="Read more about JalRakshak on GitHub">
+                  <Button
+                    color="white"
+                    bgColor={currentColor}
+                    text="Read More"
+                    borderRadius="10px"
+                  />
+                </a>
+              </div>
 
             </div>
           </div>

@@ -3,7 +3,7 @@ import { get, push, ref, set } from 'firebase/database';
 import React, { useRef, useState } from 'react';
 import { Header } from '../components';
 import { EditorData } from '../data/dummy';
-import { database } from '../firebaseConfig';
+import { database } from '../firebaseConfig.js';
 
 const Editor = () => {
   const [complain, setComplain] = useState('');
@@ -12,6 +12,24 @@ const Editor = () => {
 
   // Ref to access the editor's instance
   const editorRef = useRef(null);
+
+  const getCurrentReportedComplains = async (refObj) => {
+    try {
+      const snapshot = await get(refObj);
+      return snapshot.exists() ? snapshot.val() : 0;
+    } catch (error) {
+      console.error('Error getting reportedComplains:', error);
+      return 0;
+    }
+  };
+
+  const updateReportedComplains = async (refObj, value) => {
+    try {
+      await set(refObj, value);
+    } catch (error) {
+      console.error('Error updating reportedComplains:', error);
+    }
+  };
 
   const handleAddData = async () => {
     try {
@@ -24,42 +42,21 @@ const Editor = () => {
       const plainTextComplain = complain.replace(/<[^>]*>/g, ''); // Remove all HTML tags
 
       await set(newDataRef, {
-        name: name,
+        name,
         complain: plainTextComplain,
-        imageBase64: imageBase64, // Save the image base64 string in Firebase
+        imageBase64, // Save the image base64 string in Firebase
       });
 
       const currentReportedComplains = await getCurrentReportedComplains(rsRef);
-    const incrementedValue = currentReportedComplains + 1;
-    await updateReportedComplains(rsRef, incrementedValue);
-
-
+      const incrementedValue = currentReportedComplains + 1;
+      await updateReportedComplains(rsRef, incrementedValue);
       setName('');
       setComplain('');
-      setImageBase64(''); 
+      setImageBase64('');
       // Clear image after saving
       alert('Data Added Successfully');
     } catch (error) {
       console.error(error);
-    }
-  };
-
-  const getCurrentReportedComplains = async (ref) => {
-    try {
-      const snapshot = await get(ref);
-      return snapshot.exists() ? snapshot.val() : 0;
-    } catch (error) {
-      console.error('Error getting reportedComplains:', error);
-      return 0;
-    }
-  };
-
-
-  const updateReportedComplains = async (ref, value) => {
-    try {
-      await set(ref, value);
-    } catch (error) {
-      console.error('Error updating reportedComplains:', error);
     }
   };
 
@@ -112,7 +109,7 @@ const Editor = () => {
         <Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar]} />
       </RichTextEditorComponent>
       <div className="mb-4 mt-4">
-        <button onClick={handleAddData} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button type="button" onClick={handleAddData} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
           Add Data
         </button>
       </div>

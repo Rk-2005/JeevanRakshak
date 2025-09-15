@@ -31,6 +31,7 @@ const Sidebar = () => {
             <TooltipComponent content="Menu" position="BottomCenter">
               <button
                 type="button"
+                aria-label="Close sidebar"
                 onClick={() => setActiveMenu(!activeMenu)}
                 style={{ color: currentColor }}
                 className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden"
@@ -63,14 +64,14 @@ const Sidebar = () => {
             ))}
 
             {/* GIS-Mapping section */}
-            <div key='GISMapping'>
+            <div key="GISMapping">
               <p className="text-gray-400 dark:text-gray-400 m-3 mt-4 uppercase">
                 GIS-Mapping
               </p>
               <a
                 href="http://localhost:3001/gisTracking"
                 onClick={handleCloseSideBar}
-                className={window.location.pathname.includes("gisTracking") ? activeLink : normalLink}
+                className={window.location.pathname.includes('gisTracking') ? activeLink : normalLink}
               >
                 <AiOutlineShoppingCart />
                 <span className="capitalize ">gisTracking</span>

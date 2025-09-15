@@ -1,7 +1,7 @@
 import { get, ref } from 'firebase/database';
 import React, { useEffect, useState } from 'react';
 import { Header } from '../components';
-import { database } from '../firebaseConfig';
+import { database } from '../firebaseConfig.js';
 
 const GisTracking = () => {
   const [waterSavedValue, setWaterSavedValue] = useState('');
@@ -13,11 +13,11 @@ const GisTracking = () => {
   useEffect(() => {
     const fetchValues = async () => {
       try {
-        const waterSavedRef = ref(database, 'WaterSaved')
+        const waterSavedRef = ref(database, 'WaterSaved');
         const variable2Ref = ref(database, 'activeSensors');
         const variable3Ref = ref(database, 'frudsDetects');
         const variable4Ref = ref(database, 'leakdetects');
-        const variable5Ref = ref(database, 'reportedComplains'); // Replace with your node name
+        const variable5Ref = ref(database, 'reportedComplains');
 
         const snapshot1 = await get(waterSavedRef);
         const snapshot2 = await get(variable2Ref);

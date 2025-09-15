@@ -3,7 +3,10 @@ import React, { useEffect } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 
-import { Cart, Chat, Notification, UserProfile } from '.';
+import Cart from './Cart';
+import Chat from './Chat';
+import Notification from './Notification';
+import UserProfile from './UserProfile';
 import { useStateContext } from '../contexts/ContextProvider';
 import avatar from '../data/JR3.png';
 
@@ -60,12 +63,11 @@ const Navbar = () => {
             className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
             onClick={() => handleClick('userProfile')}
           >
-            <img class="avatar"
-              className="rounded-full w-10 h-10"
+            <img
+              className="avatar rounded-full w-10 h-10"
               src={avatar}
               alt="user-profile"
             />
-           
             <MdKeyboardArrowDown className="text-gray-400 text-14" />
           </div>
         </TooltipComponent>
@@ -75,8 +77,6 @@ const Navbar = () => {
         {isClicked.notification && (<Notification />)}
         {isClicked.userProfile && (<UserProfile />)}
       </div>
-
-      
 
     </div>
   );

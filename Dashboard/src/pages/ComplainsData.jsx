@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { ref, onValue } from 'firebase/database';
-import { database } from '../firebaseConfig'; // Adjust the path if necessary to point to your firebaseConfig
+import { database } from '../firebaseConfig.js';
 
 const ComplainsData = () => {
   const [complaints, setComplaints] = useState([]);
 
   useEffect(() => {
     const complaintsRef = ref(database, 'Complains'); // Ensure this matches your structure in Firebase
-    onValue(complaintsRef, (snapshot) => {
+    const unsubscribe = onValue(complaintsRef, (snapshot) => {
       const data = snapshot.val();
-      const complaintsList = data ? Object.keys(data).map(key => ({ id: key, ...data[key] })) : [];
+      const complaintsList = data ? Object.keys(data).map((key) => ({ id: key, ...data[key] })) : [];
       setComplaints(complaintsList);
-    }, {
-      onlyOnce: true // Fetch data only once; remove if you want real-time updates
     });
+
+    return () => unsubscribe();
   }, []);
 
   return (
@@ -32,20 +32,21 @@ const ComplainsData = () => {
             </tr>
           </thead>
           <tbody>
-            {complaints.map((complaint, index) => (
-              <tr key={index}>
+            {complaints.map((complaint) => (
+              <tr key={complaint.id}>
                 <td className="py-2 px-4 border-b">{complaint.id}</td>
                 <td className="py-2 px-4 border-b">{complaint.date}</td>
                 <td className="py-2 px-4 border-b">{complaint.description}</td>
                 <td className="py-2 px-4 border-b">
                   {complaint.imageUrl ? (
-                    <img
-                      src={complaint.imageUrl}
-                      alt="Complaint"
-                      style={{ width: '100px', height: 'auto' }}
-                      onClick={() => window.open(complaint.imageUrl, '_blank')}
-                      onError={(e) => { e.target.style.display = 'none'; }} // Hide the image if there's an error
-                    />
+                    <button type="button" onClick={() => window.open(complaint.imageUrl, '_blank')}>
+                      <img
+                        src={complaint.imageUrl}
+                        alt="Complaint"
+                        style={{ width: '100px', height: 'auto' }}
+                        onError={(e) => { e.target.style.display = 'none'; }}
+                      />
+                    </button>
                   ) : 'No image'}
                 </td>
                 <td className="py-2 px-4 border-b">{complaint.location}</td>
