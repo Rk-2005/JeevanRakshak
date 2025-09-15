@@ -1,11 +1,9 @@
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import React from 'react';
-import { AiOutlineShoppingCart } from 'react-icons/ai'; // Import the icon
-import { MdOutlineCancel } from 'react-icons/md';
-import { SiShopware } from 'react-icons/si';
-import logo from '../data/jeevanrakshak-logo.svg';
-// import { NavLink } from 'react-router-dom';
 import { Link, NavLink } from 'react-router-dom';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { MdOutlineCancel } from 'react-icons/md';
+import logo from '../data/jeevanrakshak-logo.png';
 import { useStateContext } from '../contexts/ContextProvider';
 import { links } from '../data/dummy';
 
@@ -26,8 +24,8 @@ const Sidebar = () => {
       {activeMenu && (
         <>
           <div className="flex justify-between items-center">
-            <Link to="/" onClick={handleCloseSideBar} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
-              <img src={logo} alt="JeevanRakshak" className="h-8 w-auto" />
+            <Link to="/" onClick={handleCloseSideBar} className="items-center gap-3 ml-10 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
+              <img src={logo} alt="JeevanRakshak" className="h-12 w-13" />
             </Link>
             <TooltipComponent content="Menu" position="BottomCenter">
               <button

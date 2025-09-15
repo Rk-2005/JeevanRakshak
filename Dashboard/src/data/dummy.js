@@ -487,9 +487,8 @@ export const links = [
   {
     title: 'Pages',
     links: [
-     
       {
-        name: 'leakage-detection',
+        name: 'outbreak-detection',
         icon: <IoMdContacts />,
       },
       {
@@ -505,10 +504,7 @@ export const links = [
         name: 'sensor-allocation',
         icon: <AiOutlineCalendar />,
       },
-      {
-        name: 'pilferage',
-        icon: <BsKanban />,
-      },
+      
       // {
       //   name: 'editor',
       //   icon: <FiEdit />,

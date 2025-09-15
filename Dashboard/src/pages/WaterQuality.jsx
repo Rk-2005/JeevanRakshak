@@ -73,7 +73,7 @@ function WaterQuality() {
           )}
         </div>
       </main>
-   
+
     </div>
   );
 }

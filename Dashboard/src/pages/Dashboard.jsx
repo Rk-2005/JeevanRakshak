@@ -85,28 +85,28 @@ const Dashboard = () => {
             <p className="mt-3">
               <span className="text-lg font-semibold">{leaksDetected}</span>
             </p>
-            <p className="text-sm text-gray-400 mt-1">Leak Detects</p>
+            <p className="text-sm text-gray-400 mt-1">Detected Outbreak Risks</p>
           </div>
 
           <div className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl ">
             <p className="mt-3">
               <span className="text-lg font-semibold">{fraudsDetected}</span>
             </p>
-            <p className="text-sm text-gray-400 mt-1">Fraud Detects</p>
+            <p className="text-sm text-gray-400 mt-1">Unsafe Water Sources</p>
           </div>
 
           <div className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl ">
             <p className="mt-3">
               <span className="text-lg font-semibold">{reportedComplaints}</span>
             </p>
-            <p className="text-sm text-gray-400 mt-1">Reported Complaints</p>
+            <p className="text-sm text-gray-400 mt-1">Reported Cases</p>
           </div>
 
           <div className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl ">
             <p className="mt-3">
               <span className="text-lg font-semibold">{activeSensors}</span>
             </p>
-            <p className="text-sm text-gray-400 mt-1">Active Sensors</p>
+            <p className="text-sm text-gray-400 mt-1">Active Data Sources</p>
           </div>
         </div>
       </div>
@@ -114,7 +114,7 @@ const Dashboard = () => {
       <div className="flex gap-10 flex-wrap justify-center">
         <div>
           <div className="bottom-text-container">
-            Live Detections are on !! For help in any technical issue, please contact us at 7387026440
+            High Risk Alert: Potential {"Cholera"} in Village A. Stay updated and take precautions.
           </div>
           <iframe
             title="Report Section"
@@ -130,7 +130,7 @@ const Dashboard = () => {
             style={{ backgroundColor: currentColor }}
           >
             <div className="flex justify-between items-center ">
-              <p className="font-semibold text-white text-2xl">Leakage Detections</p>
+              <p className="font-semibold text-white text-2xl">Outbreak Risk Trend</p>
 
               <div>
                 <p className="text-2xl text-white font-semibold mt-8">930 liters</p>
