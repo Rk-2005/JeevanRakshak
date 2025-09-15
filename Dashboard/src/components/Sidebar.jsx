@@ -3,6 +3,7 @@ import React from 'react';
 import { AiOutlineShoppingCart } from 'react-icons/ai'; // Import the icon
 import { MdOutlineCancel } from 'react-icons/md';
 import { SiShopware } from 'react-icons/si';
+import logo from '../data/jeevanrakshak-logo.svg';
 // import { NavLink } from 'react-router-dom';
 import { Link, NavLink } from 'react-router-dom';
 import { useStateContext } from '../contexts/ContextProvider';
@@ -17,8 +18,8 @@ const Sidebar = () => {
     }
   };
 
-  const activeLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg  text-white  text-md m-2';
-  const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2';
+  const activeLink = 'flex items-center gap-4 pl-4 pr-3 py-2.5 rounded-xl text-white text-[15px] m-2 shadow-sm';
+  const normalLink = 'flex items-center gap-4 pl-4 pr-3 py-2.5 rounded-xl text-[15px] text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2 transition-colors';
 
   return (
     <div className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
@@ -26,7 +27,7 @@ const Sidebar = () => {
         <>
           <div className="flex justify-between items-center">
             <Link to="/" onClick={handleCloseSideBar} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
-              <SiShopware /> <span>JalRakshak</span>
+              <img src={logo} alt="JeevanRakshak" className="h-8 w-auto" />
             </Link>
             <TooltipComponent content="Menu" position="BottomCenter">
               <button
@@ -40,7 +41,7 @@ const Sidebar = () => {
               </button>
             </TooltipComponent>
           </div>
-          <div className="mt-10 ">
+          <div className="mt-8">
             {links.map((item) => (
               <div key={item.title}>
                 <p className="text-gray-400 dark:text-gray-400 m-3 mt-4 uppercase">
@@ -69,7 +70,7 @@ const Sidebar = () => {
                 GIS-Mapping
               </p>
               <a
-                href="http://localhost:3001/gisTracking"
+                href="https://health-rakshak.vercel.app/"
                 onClick={handleCloseSideBar}
                 className={window.location.pathname.includes('gisTracking') ? activeLink : normalLink}
               >

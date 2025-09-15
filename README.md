@@ -1,13 +1,13 @@
-# JalRakshak
+# JeevanRakshak
 
-**JalRakshak** is a project that uses Flask for web development, EPANet for water network simulations, and various data analysis and machine learning tools to provide insights and predictions based on water network data.
+**JeevanRakshak** is a project that uses Flask for web development, EPANet for water network simulations, and various data analysis and machine learning tools to provide insights and predictions based on water network data.
 
 ## Clone the Repository
 
 To get started, clone the repository using:
 
 ```
-git clone https://github.com/Makarand-Tighare/JalRakshak
+git clone https://github.com/Makarand-Tighare/JeevanRakshak
 ```
 
 ## Setup and Installation
@@ -15,7 +15,7 @@ git clone https://github.com/Makarand-Tighare/JalRakshak
 1. **Navigate to the project directory:**
 
     ```
-    cd JalRakshak
+    cd JeevanRakshak
     ```
 
 2. **Create and activate a virtual environment:**

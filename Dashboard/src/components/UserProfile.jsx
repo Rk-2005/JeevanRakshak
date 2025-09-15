@@ -30,7 +30,7 @@ const UserProfile = () => {
         <div>
           <p className="font-semibold text-xl dark:text-gray-200"> Levish Bhoyar </p>
           <p className="text-gray-500 text-sm dark:text-gray-400">  Administrator   </p>
-          <p className="text-gray-500 text-sm font-semibold dark:text-gray-400"> lbhoyar123@JalRakshak.com </p>
+          <p className="text-gray-500 text-sm font-semibold dark:text-gray-400"> lbhoyar123@JeevanRakshak.com </p>
         </div>
       </div>
       <div>

@@ -164,7 +164,7 @@ const Dashboard = () => {
                 A go-to solution for all your problems. Get the app today.
               </p>
               <div className="mt-3">
-                <a href="https://github.com/Makarand-Tighare/Hack-it-Sapiens/tree/main/JalRakshak" target="_blank" rel="noopener noreferrer" aria-label="Read more about JalRakshak on GitHub">
+                <a href="https://github.com/Makarand-Tighare/Hack-it-Sapiens/tree/main/JalRakshak" target="_blank" rel="noopener noreferrer" aria-label="Read more about JeevanRakshak on GitHub">
                   <Button
                     color="white"
                     bgColor={currentColor}
