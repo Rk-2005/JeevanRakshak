@@ -11,7 +11,6 @@ export { default as ComplainsData } from './ComplainsData';
 export { default as Dashboard } from './Dashboard';
 export { default as Editor } from './Editor';
 export { default as GisTracking } from './GisTracking';
-export { default as OutbreakDetection } from './OutbreakDetection';
 export { default as SensorAllocation } from './SensorAllocation';
 export { default as WaterQuality } from './WaterQuality';
 

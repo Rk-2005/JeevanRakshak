@@ -488,10 +488,6 @@ export const links = [
     title: 'Pages',
     links: [
       {
-        name: 'outbreak-detection',
-        icon: <IoMdContacts />,
-      },
-      {
         name: 'complains-data',
         icon: <RiContactsLine />,
       },

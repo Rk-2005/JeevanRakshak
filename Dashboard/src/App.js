@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './App.css';
 import { Footer, Navbar, Sidebar, ThemeSettings } from './components';
-import { ColorPicker, ComplainsData, Dashboard, WaterQuality, Editor, OutbreakDetection, SensorAllocation } from './pages';
+import { ColorPicker, ComplainsData, Dashboard, WaterQuality,Editor, SensorAllocation } from './pages';
 
 import { useStateContext } from './contexts/ContextProvider';
 
@@ -72,7 +72,7 @@ const App = () => {
 
                 {/* pages  */}
                 {/* <Route path="/gisTracking" element={<GisTracking />} /> */}
-                <Route path="/outbreak-detection" element={<OutbreakDetection />} />
+                
                 <Route path="/complains-data" element={<ComplainsData />} />
 
                 {/* apps  */}
