@@ -68,7 +68,7 @@ const Sidebar = () => {
                 GIS-Mapping
               </p>
               <a
-                href="https://health-rakshak.vercel.app/"
+                href="https://jeevan-rakshak-eight.vercel.app/"
                 onClick={handleCloseSideBar}
                 className={window.location.pathname.includes('gisTracking') ? activeLink : normalLink}
               >

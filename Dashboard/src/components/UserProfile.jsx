@@ -1,10 +1,10 @@
 import React from 'react';
 import { MdOutlineCancel } from 'react-icons/md';
 
-import Button from './Button';
+import { Button } from '.';
 import { userProfileData } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
-import avatar from '../data/avatar.jpg';
+import avatar from '../data/avatar.png';
 
 const UserProfile = () => {
   const { currentColor } = useStateContext();
@@ -28,9 +28,9 @@ const UserProfile = () => {
           alt="user-profile"
         />
         <div>
-          <p className="font-semibold text-xl dark:text-gray-200"> Levish Bhoyar </p>
+          <p className="font-semibold text-xl dark:text-gray-200">Ritesh Kriplani </p>
           <p className="text-gray-500 text-sm dark:text-gray-400">  Administrator   </p>
-          <p className="text-gray-500 text-sm font-semibold dark:text-gray-400"> lbhoyar123@JeevanRakshak.com </p>
+          <p className="text-gray-500 text-sm font-semibold dark:text-gray-400"> kriplani@JalRakshak.com </p>
         </div>
       </div>
       <div>

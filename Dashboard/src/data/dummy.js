@@ -9,7 +9,7 @@ import { IoMdContacts } from 'react-icons/io';
 import { MdOutlineSupervisorAccount } from 'react-icons/md';
 import { RiContactsLine } from 'react-icons/ri';
 import { TiTick } from 'react-icons/ti';
-import avatar from './avatar.jpg';
+import avatar from './avatar.png';
 import avatar2 from './avatar2.jpg';
 import avatar3 from './avatar3.png';
 import avatar4 from './avatar4.jpg';
