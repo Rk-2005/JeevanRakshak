@@ -114,7 +114,7 @@ const Dashboard = () => {
       <div className="flex gap-10 flex-wrap justify-center">
         <div>
           <div className="bottom-text-container">
-            High Risk Alert: Potential {"Cholera"} in Village A. Stay updated and take precautions.
+            High Risk Alert: Potential Cholera in Village A. Stay updated and take precautions.
           </div>
           <iframe
             title="Report Section"
