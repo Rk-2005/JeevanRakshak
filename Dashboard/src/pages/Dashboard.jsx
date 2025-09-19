@@ -132,7 +132,7 @@ const Dashboard = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
             <div>
-              <p className="font-semibold text-white text-2xl">Leakage Detections</p>
+              <p className="font-semibold text-white text-2xl">Outbreaks Detections</p>
               <p className="text-gray-200 mt-2">Monthly statistics</p>
             </div>
             <div className="mt-4 md:mt-0">
@@ -162,7 +162,7 @@ const Dashboard = () => {
           />
           <div className="mt-6 flex-1 flex flex-col">
             <p className="font-semibold text-lg">Download Our App Today!</p>
-            <p className="text-gray-500 text-sm">By Team Sirius3</p>
+            <p className="text-gray-500 text-sm">By Team Jeevan-Rakshak</p>
             <p className="mt-4 text-gray-600 dark:text-gray-300 text-sm flex-1">
               A go-to solution for all your water management problems. Get real-time alerts and reports directly on your phone.
             </p>

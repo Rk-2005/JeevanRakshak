@@ -371,7 +371,7 @@ export default function App() {
     <Polyline
       key={index}
       positions={edge.positions}
-      pathOptions={{ color: edge.meta?.priority === 'High' ? 'red' : edge.meta?.priority === 'Medium' ? 'orange' : 'blue', weight: 5, opacity: 0.9 }}
+      pathOptions={{ color: edge.meta?.priority === 'High' ? 'red' : edge.meta?.priority === 'Medium' ? 'orange' : 'green', weight: 5, opacity: 0.9 }}
       eventHandlers={{
         click: () => setSelectedEdge(edge),
       }}
