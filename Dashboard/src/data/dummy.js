@@ -480,13 +480,32 @@ export const links = [
         name: 'Water-Quality',
         icon: <FiShoppingCart />,
       },
-
     ],
   },
-
   {
-    title: 'Pages',
+    title: 'Health Monitoring',
     links: [
+      {
+        name: 'health-data',
+        icon: <MdOutlineSupervisorAccount />,
+      },
+      {
+        name: 'outbreak-risk',
+        icon: <FiBarChart />,
+      },
+      {
+        name: 'water-sensors',
+        icon: <BsBoxSeam />,
+      },
+    ],
+  },
+  {
+    title: 'Community',
+    links: [
+      {
+        name: 'complaints-awareness',
+        icon: <RiContactsLine />,
+      },
       {
         name: 'complains-data',
         icon: <RiContactsLine />,
@@ -500,7 +519,6 @@ export const links = [
         name: 'sensor-allocation',
         icon: <AiOutlineCalendar />,
       },
-      
       // {
       //   name: 'editor',
       //   icon: <FiEdit />,

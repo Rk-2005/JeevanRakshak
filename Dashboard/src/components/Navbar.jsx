@@ -7,6 +7,7 @@ import Cart from './Cart';
 import Chat from './Chat';
 import Notification from './Notification';
 import UserProfile from './UserProfile';
+import LanguageSwitcher from './LanguageSwitcher';
 import { useStateContext } from '../contexts/ContextProvider';
 import avatar from '../data/JR3.png';
 
@@ -54,7 +55,8 @@ const Navbar = () => {
     <div className="flex justify-between p-2 md:ml-6 md:mr-6 relative border-b border-gray-100 dark:border-gray-700/50">
 
       <NavButton title="Menu" customFunc={handleActiveMenu} color={currentColor} icon={<AiOutlineMenu />} />
-      <div className="flex">
+      <div className="flex items-center gap-2">
+        <LanguageSwitcher />
         {/* <NavButton title="Cart" customFunc={() => handleClick('cart')} color={currentColor} icon={<FiShoppingCart />} /> */}
         {/* <NavButton title="Chat" dotColor="#03C9D7" customFunc={() => handleClick('chat')} color={currentColor} icon={<BsChatLeft />} /> */}
         {/* <NavButton title="Notification" dotColor="rgb(254, 201, 15)" customFunc={() => handleClick('notification')} color={currentColor} icon={<RiNotification3Line />} /> */}

@@ -13,4 +13,8 @@ export { default as Editor } from './Editor';
 export { default as GisTracking } from './GisTracking';
 export { default as SensorAllocation } from './SensorAllocation';
 export { default as WaterQuality } from './WaterQuality';
+export { default as HealthDataCollection } from './HealthDataCollection';
+export { default as OutbreakRisk } from './OutbreakRisk';
+export { default as WaterQualitySensors } from './WaterQualitySensors';
+export { default as ComplaintsAwareness } from './ComplaintsAwareness';
 

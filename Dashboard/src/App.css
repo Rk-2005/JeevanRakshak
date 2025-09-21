@@ -46,6 +46,138 @@
   border: none;
 }
 
+/* Alert System Animations */
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
+
+/* Additional utility classes */
+.group:hover .group-hover\:block {
+  display: block;
+}
+
+/* Water Quality Form Styles */
+.WaterQuality {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.WaterQuality .header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.WaterQuality .header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.WaterQuality .main-content {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.WaterQuality .file-upload {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.WaterQuality .file-input-label {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.WaterQuality .file-input-label:hover {
+  background: #0056b3;
+}
+
+.WaterQuality input[type="file"] {
+  display: none;
+}
+
+.WaterQuality .predict-button {
+  padding: 12px 24px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.WaterQuality .predict-button:hover {
+  background: #218838;
+}
+
+.WaterQuality .predict-button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+.WaterQuality .spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.WaterQuality .prediction-results {
+  margin-top: 30px;
+}
+
+.WaterQuality .prediction-results h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.WaterQuality .prediction-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.WaterQuality .prediction-table th,
+.WaterQuality .prediction-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.WaterQuality .prediction-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.WaterQuality .prediction-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
 .av
 
 .container {
