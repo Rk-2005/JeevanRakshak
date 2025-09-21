@@ -136,19 +136,19 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="mt-24 px-4 md:px-6">
+    <div className="mt-8 px-4 md:px-6">
       <TestComponent />
       {/* Header with Filters and Export */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
-        <div>
-          <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-1">
+        <div className='mb-10 pb-10'>
+          <h1 className="text-3xl font-bold text-slate-800 dark:text-white mb-2">
             Community Health Monitoring Dashboard
           </h1>
           <p className="text-gray-600 dark:text-gray-300">
             Real-time monitoring and analysis of water quality and health data
           </p>
         </div>
-        <div className="flex items-center space-x-4 mt-4 md:mt-0">
+        <div className="flex items-center space-x-4   mb-10 pb-10">
           <Button
             color="white"
             bgColor={currentColor}
