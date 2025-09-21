@@ -58,6 +58,11 @@ const Dashboard = () => {
     { name: 'Village D', cases: 15, waterQuality: 'Poor', risk: 'High' },
     { name: 'Village E', cases: 4, waterQuality: 'Fair', risk: 'Medium' },
   ];
+  const [show,setshow]=useState(false);
+
+  const download=()=>{
+    setshow(true);
+  }
 
   useEffect(() => {
     const fetchValues = async () => {
@@ -115,11 +120,11 @@ const Dashboard = () => {
     if (format === 'pdf') {
       // Mock PDF export
       console.log('Exporting to PDF:', data);
-      alert('PDF export functionality would be implemented here');
+      alert('Coming soon');
     } else if (format === 'excel') {
       // Mock Excel export
       console.log('Exporting to Excel:', data);
-      alert('Excel export functionality would be implemented here');
+      alert('Coming soon');
     }
   };
 
@@ -265,7 +270,9 @@ const Dashboard = () => {
               text={t('downloadReport')}
               borderRadius="10px"
               size="md"
+              onClick={download}
             />
+            {show && <div className='text-blue-400 font-bold text-xl mt-2 ml-1'>Coming soon</div>}
           </div>
         </div>
 
