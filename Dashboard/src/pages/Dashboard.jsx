@@ -168,13 +168,13 @@ const Dashboard = () => {
               icon={<FaDownload />}
             />
             <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-secondary-dark-bg rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-10 hidden group-hover:block">
-              <button
+              <buttons
                 type="button"
                 onClick={() => handleExport('pdf')}
                 className="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-t-lg"
               >
                 Export as PDF
-              </button>
+              </buttons>
               <button
                 type="button"
                 onClick={() => handleExport('excel')}

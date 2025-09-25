@@ -592,37 +592,33 @@ export const cartData = [
     price: '$190',
   },
 ];
-
 export const chatData = [
   {
-    image:
-      avatar2,
-    message: 'Roman Joined the Team!',
-    desc: 'Congratulate him',
+    message: 'Water Quality Alert',
+    desc: 'High turbidity detected in river sample',
     time: '9:08 AM',
+    priority: 'high',   // 🔴 Red
   },
   {
-    image:
-      avatar3,
-    message: 'New message received',
-    desc: 'Salma sent you new message',
+    message: 'New Water Supply Update',
+    desc: 'Municipal pipeline maintenance scheduled',
     time: '11:56 AM',
+    priority: 'medium', // 🟠 Orange
   },
   {
-    image:
-      avatar4,
-    message: 'New Payment received',
-    desc: 'Check your earnings',
+    message: 'Water Level Warning',
+    desc: 'Reservoir water dropped below safe level',
     time: '4:39 AM',
+    priority: 'medium',
   },
   {
-    image:
-      avatar,
-    message: 'Jolly completed tasks',
-    desc: 'Assign her new tasks',
+    message: 'Safe Water Zone',
+    desc: 'Tap water tested and safe to drink',
     time: '1:12 AM',
+    priority: 'low',    // 🟢 Green
   },
 ];
+
 
 // const dataFromFirebase =  fetchDataFromFirebase();
 
